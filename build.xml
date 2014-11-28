@@ -1,0 +1,16 @@
+<project default="jar">
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build"/>
+        <javac srcdir="src" destdir="build" includeantruntime="false" classpath="jolie.jar"/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="lib"/>
+        <jar destfile="lib/template.jar" basedir="build">
+        </jar>
+    </target>
+</project>
