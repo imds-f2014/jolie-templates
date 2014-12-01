@@ -10,7 +10,7 @@ public class Template extends JavaService {
 		String template = request.strValue();
 		StringBuilder builder = new StringBuilder();
 
-		Pattern pattern = Pattern.compile("\\$([a-zA-Z]+)");
+		Pattern pattern = Pattern.compile("\\$\\{([_a-zA-Z][_a-zA-Z0-9]*)\\}");
 		Matcher matcher = pattern.matcher(template);
 
 		int i = 0;

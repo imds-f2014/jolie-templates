@@ -5,7 +5,7 @@
 
     <target name="compile">
         <mkdir dir="build"/>
-        <javac srcdir="src" destdir="build" includeantruntime="false" classpath="jolie.jar"/>
+		<javac srcdir="src" destdir="build" includeantruntime="false" classpath="/opt/jolie/jolie.jar"/>
     </target>
 
     <target name="jar" depends="compile">
